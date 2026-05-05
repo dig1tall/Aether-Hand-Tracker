@@ -1,0 +1,1271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>935</width>
+    <height>643</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget {
+    border-image: url(../assets/background.png) 0 0 0 0 stretch stretch;
+}
+QMainWindow {
+    background-color: #050505; /* Почти черный, как твоя тема */
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">#centralwidget {
+    /* Этого ОДНОГО свойства достаточно, чтобы фон растянулся и центрировался */
+    border-image: url(../assets/background.png) 0 0 0 0 stretch stretch;
+    
+    /* Запасной план: если картинка не найдется, окно будет черным, а не белым */
+    background-color: #000000;
+}</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QStackedWidget, QWidget[objectName^=&quot;page&quot;] {
+    background: transparent;
+}</string>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="page_5">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="minimumSize">
+             <size>
+              <width>250</width>
+              <height>250</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>250</width>
+              <height>250</height>
+             </size>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="../resources.qrc">:/logo/assets/logo.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="btn_start">
+            <property name="minimumSize">
+             <size>
+              <width>371</width>
+              <height>39</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>371</width>
+              <height>39</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">/* Базовое состояние (Зеленоватый неон) */
+QPushButton {
+    /* Фон остается константным */
+    background-color: rgba(62, 25, 80, 150); 
+    
+    /* Зеленый неон для текста и границ */
+    border: 2px solid #deff9a;
+    color: #deff9a;
+    
+    border-radius: 10px;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 20px;
+}
+
+/* Состояние STOP (Меняем только обводку и текст на красный) */
+QPushButton[active=&quot;true&quot;] {
+    border: 2px solid #ff4d4d;
+    color: #ff4d4d;
+    /* background-color не пишем, чтобы он наследовался из блока выше */
+}
+
+/* Эффект при наведении (можно сделать чуть ярче фон) */
+QPushButton:hover {
+    background-color: rgba(90, 35, 110, 180);
+}
+
+/* Эффект нажатия */
+QPushButton:pressed {
+    background-color: #deff9a;
+    color: #000000;
+}</string>
+            </property>
+            <property name="text">
+             <string>START SESSION</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_settings">
+            <property name="minimumSize">
+             <size>
+              <width>371</width>
+              <height>39</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>371</width>
+              <height>39</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton#btn_settings {
+    /* Тот же темный фон, но чуть более серый оттенок для отличия */
+    background-color: rgba(30, 30, 35, 220); 
+    
+    /* Стальная обводка */
+    border: 2px solid #a0a0a0; 
+    border-radius: 10px;
+    
+    /* Копируем шрифт из твоего кода */
+    color: #e0e0e0;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 14px;
+    font-weight: bold; /* Или поставь 900, если у Start так */
+    /* letter-spacing: 4px; — добавь, если у Start буквы &quot;раздвинуты&quot; */
+    
+    padding: 8px 20px;
+}
+
+/* При наведении */
+QPushButton#btn_settings:hover {
+    background-color: rgba(90, 35, 110, 180); /* Тот же эффект наведения */
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+/* Активное состояние (Test Mode ON) */
+QPushButton#btn_settings[active=&quot;true&quot;] {
+    border: 2px solid #ffffff; /* Белая обводка при тесте */
+    color: #ffffff;
+}
+
+/* Эффект нажатия (Инверсия как у основной) */
+QPushButton#btn_settings:pressed {
+    background-color: #e0e0e0;
+    color: #000000;
+}</string>
+            </property>
+            <property name="text">
+             <string>Settings</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_info">
+            <property name="minimumSize">
+             <size>
+              <width>371</width>
+              <height>39</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>371</width>
+              <height>39</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton#btn_info {
+    /* Глубокий темный синий фон */
+    background-color: rgba(25, 35, 45, 220); 
+    
+    /* Стальная обводка */
+    border: 2px solid #a0a0a0; 
+    border-radius: 10px;
+    
+    /* Шрифт из твоего проекта */
+    color: #e0e0e0;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+     /* Делаем капсом, как в Start */
+    
+    padding: 8px 20px;
+}
+
+/* При наведении — переходим в холодный синий/голубой */
+QPushButton#btn_info:hover {
+    background-color: rgba(30, 70, 110, 180); 
+    border-color: #00dfff; /* Яркий голубой акцент */
+    color: #ffffff;
+}
+
+/* Состояние, когда вкладка открыта */
+QPushButton#btn_info[active=&quot;true&quot;] {
+    border: 2px solid #00dfff;
+    background-color: rgba(30, 70, 110, 100);
+    color: #ffffff;
+}
+
+/* Эффект нажатия (Инверсия) */
+QPushButton#btn_info:pressed {
+    background-color: #e0e0e0;
+    color: #000000;
+}</string>
+            </property>
+            <property name="text">
+             <string>Information</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_10">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_quit">
+            <property name="minimumSize">
+             <size>
+              <width>371</width>
+              <height>39</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>371</width>
+              <height>39</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton#btn_quit {
+    /* Глубокий темный красный фон */
+    background-color: rgba(60, 20, 20, 220); 
+    
+    /* Стальная обводка */
+    border: 2px solid #a0a0a0; 
+    border-radius: 10px;
+    
+    /* Шрифт */
+    color: #e0e0e0;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    
+    padding: 8px 20px;
+}
+
+
+
+/* Состояние, когда вкладка активна */
+QPushButton#btn_quit[active=&quot;true&quot;] {
+    border: 2px solid #ff4d4d;
+    background-color: rgba(110, 30, 30, 100);
+    color: #ffffff;
+}
+
+/* Эффект нажатия (Инверсия в светлый/белый) */
+QPushButton#btn_quit:pressed {
+    background-color: #ff4d4d;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+#btn_quit:hover {
+    background-color: rgba(255, 50, 50, 40);
+    border: 1px solid #FF3232;
+    color: #FF3232;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Quit</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <spacer name="verticalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_6">
+       <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0">
+          <item>
+           <widget class="QLabel" name="video_settings_label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>4</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>723</width>
+              <height>623</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>723</width>
+              <height>623</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: 4px solid #555555;
+background-color: rgba(0, 0, 0, 100); /* Полупрозрачный черный */
+border-radius: 5px;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="scaledContents">
+             <bool>false</bool>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <property name="leftMargin">
+             <number>10</number>
+            </property>
+            <property name="rightMargin">
+             <number>10</number>
+            </property>
+            <item>
+             <spacer name="verticalSpacer_9">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;
+color: #E0E0E0;
+font-family: &quot;Segoe UI&quot;;
+font-size: 11px;
+font-weight: bold;
+text-transform: uppercase;
+border: none;</string>
+              </property>
+              <property name="text">
+               <string>Detection Accuracy</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="spn_det_conf">
+              <property name="styleSheet">
+               <string notr="true">QDoubleSpinBox, QSpinBox {
+    background-color: rgba(30, 30, 30, 150);
+    border: 1px solid #555555;
+    border-radius: 4px;
+    color: #FFFFFF;
+    padding: 4px;
+    min-height: 25px;
+}
+
+QDoubleSpinBox:hover, QSpinBox:hover {
+    border: 1px solid #999999;
+}</string>
+              </property>
+              <property name="decimals">
+               <number>2</number>
+              </property>
+              <property name="minimum">
+               <double>0.100000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>1.000000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>0.010000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;
+color: #E0E0E0;
+font-family: &quot;Segoe UI&quot;;
+font-size: 11px;
+font-weight: bold;
+text-transform: uppercase;
+border: none;</string>
+              </property>
+              <property name="text">
+               <string>Tracking accuracy</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="spn_track_conf">
+              <property name="styleSheet">
+               <string notr="true">QDoubleSpinBox, QSpinBox {
+    background-color: rgba(30, 30, 30, 150);
+    border: 1px solid #555555;
+    border-radius: 4px;
+    color: #FFFFFF;
+    padding: 4px;
+    min-height: 25px;
+}
+
+QDoubleSpinBox:hover, QSpinBox:hover {
+    border: 1px solid #999999;
+}</string>
+              </property>
+              <property name="decimals">
+               <number>2</number>
+              </property>
+              <property name="minimum">
+               <double>0.100000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>1.000000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>0.010000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_14">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;
+color: #E0E0E0;
+font-family: &quot;Segoe UI&quot;;
+font-size: 11px;
+font-weight: bold;
+text-transform: uppercase;
+border: none;</string>
+              </property>
+              <property name="text">
+               <string>Swipe distance</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="spn_swipe_dist">
+              <property name="styleSheet">
+               <string notr="true">QDoubleSpinBox, QSpinBox {
+    background-color: rgba(30, 30, 30, 150);
+    border: 1px solid #555555;
+    border-radius: 4px;
+    color: #FFFFFF;
+    padding: 4px;
+    min-height: 25px;
+}
+
+QDoubleSpinBox:hover, QSpinBox:hover {
+    border: 1px solid #999999;
+}</string>
+              </property>
+              <property name="decimals">
+               <number>2</number>
+              </property>
+              <property name="minimum">
+               <double>0.010000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>1.000000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>0.010000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_15">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_5">
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;
+color: #E0E0E0;
+font-family: &quot;Segoe UI&quot;;
+font-size: 11px;
+font-weight: bold;
+text-transform: uppercase;
+border: none;</string>
+              </property>
+              <property name="text">
+               <string>VOL: PINCH THRESHOLD</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="spn_vol_dist">
+              <property name="styleSheet">
+               <string notr="true">QDoubleSpinBox, QSpinBox {
+    background-color: rgba(30, 30, 30, 150);
+    border: 1px solid #555555;
+    border-radius: 4px;
+    color: #FFFFFF;
+    padding: 4px;
+    min-height: 25px;
+}
+
+QDoubleSpinBox:hover, QSpinBox:hover {
+    border: 1px solid #999999;
+}</string>
+              </property>
+              <property name="decimals">
+               <number>3</number>
+              </property>
+              <property name="minimum">
+               <double>0.000000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>0.200000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>0.001000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_16">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;
+color: #E0E0E0;
+font-family: &quot;Segoe UI&quot;;
+font-size: 11px;
+font-weight: bold;
+text-transform: uppercase;
+border: none;</string>
+              </property>
+              <property name="text">
+               <string>VOL: SENSITIVITY</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="spn_vol_sens">
+              <property name="styleSheet">
+               <string notr="true">QDoubleSpinBox, QSpinBox {
+    background-color: rgba(30, 30, 30, 150);
+    border: 1px solid #555555;
+    border-radius: 4px;
+    color: #FFFFFF;
+    padding: 4px;
+    min-height: 25px;
+}
+
+QDoubleSpinBox:hover, QSpinBox:hover {
+    border: 1px solid #999999;
+}</string>
+              </property>
+              <property name="specialValueText">
+               <string/>
+              </property>
+              <property name="decimals">
+               <number>2</number>
+              </property>
+              <property name="minimum">
+               <double>0.000000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>1.000000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>0.010000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_18">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="check_draw_skeleton">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">/* Сам текст чекбокса */
+QCheckBox {
+    color: #E0E0E0;
+    spacing: 10px;   /* Расстояние до квадратика */
+    /* Укажи здесь шрифт, который у тебя на кнопках. Обычно это Segoe UI или Arial */
+background-color: transparent;
+color: #E0E0E0;
+font-family: &quot;Segoe UI&quot;;
+font-size: 11px;
+font-weight: bold;
+text-transform: uppercase;
+border: none;
+}
+
+/* Состояние текста, когда включено */
+QCheckBox:checked {
+    color: #2D8C5A; /* Тот самый спокойный зеленый */
+    font-weight: bold; /* Можно сделать жирным, чтобы выделялось */
+}
+
+/* Базовое состояние квадратика */
+QCheckBox::indicator {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    background-color: rgba(30, 30, 30, 200);
+}
+
+/* Состояние индикатора, когда включено */
+QCheckBox::indicator:checked {
+    background-color: #2D8C5A;
+    border-color: #2D8C5A;
+    image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0yMCA2TDkgMTdsLTUtNSIvPjwvc3ZnPg==);
+}
+
+/* Наведение на квадратик */
+QCheckBox::indicator:hover {
+    border-color: #2D8C5A;
+}</string>
+              </property>
+              <property name="text">
+               <string>DRAW LANDMARKS: OFF</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_17">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="check_mirror">
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">/* Сам текст чекбокса */
+QCheckBox {
+    color: #E0E0E0;
+    spacing: 10px;   /* Расстояние до квадратика */
+    /* Укажи здесь шрифт, который у тебя на кнопках. Обычно это Segoe UI или Arial */
+background-color: transparent;
+color: #E0E0E0;
+font-family: &quot;Segoe UI&quot;;
+font-size: 11px;
+font-weight: bold;
+text-transform: uppercase;
+border: none;
+}
+
+/* Состояние текста, когда включено */
+QCheckBox:checked {
+    color: #2D8C5A; /* Тот самый спокойный зеленый */
+    font-weight: bold; /* Можно сделать жирным, чтобы выделялось */
+}
+
+/* Базовое состояние квадратика */
+QCheckBox::indicator {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    background-color: rgba(30, 30, 30, 200);
+}
+
+/* Состояние индикатора, когда включено */
+QCheckBox::indicator:checked {
+    background-color: #2D8C5A;
+    border-color: #2D8C5A;
+    image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0yMCA2TDkgMTdsLTUtNSIvPjwvc3ZnPg==);
+}
+
+/* Наведение на квадратик */
+QCheckBox::indicator:hover {
+    border-color: #2D8C5A;
+}</string>
+              </property>
+              <property name="text">
+               <string>MIRROR: OFF</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_22">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_19">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_20">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_back">
+              <property name="styleSheet">
+               <string notr="true">QPushButton#btn_back {
+    background-color: rgba(60, 60, 65, 150);
+    border: 1px solid #555555;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: &quot;Segoe UI&quot;;
+    font-weight: bold;
+    margin-top: 20px; /* Отступ от настроек сверху */
+}
+
+QPushButton#btn_back:hover {
+    background-color: rgba(80, 80, 85, 200);
+    border-color: #AAAAAA;
+}
+
+QPushButton#btn_back:pressed {
+    background-color: rgba(40, 40, 45, 255);
+}</string>
+              </property>
+              <property name="text">
+               <string>BACK</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_21">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_7">
+       <widget class="QLabel" name="lbl_info_header">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>20</y>
+          <width>201</width>
+          <height>52</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>281</width>
+          <height>81</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background-color: rgba(0, 223, 255, 20);
+    border: 2px solid #00DFFF;
+    border-radius: 10px;
+    /*color: #4eccbb;*/
+	color: #FFFFFF;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 12px;
+}</string>
+        </property>
+        <property name="text">
+         <string>About SoftWare</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_back_info">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>577</y>
+          <width>191</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>191</width>
+          <height>51</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>191</width>
+          <height>51</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgba(35, 35, 35, 255);
+    color: #a0a0a0;
+    border: 1px solid #555555;
+    border-radius: 8px;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px;
+}
+
+QPushButton:hover {
+    border-color: #00DFFF;
+    color: #ffffff;
+}</string>
+        </property>
+        <property name="text">
+         <string>BACK</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>82</x>
+          <y>90</y>
+          <width>771</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>771</width>
+          <height>151</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>771</width>
+          <height>151</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    /* Темный фон с синим отливом */
+    background-color: rgba(20, 30, 45, 180); 
+    
+    /* Тонкая синяя рамка, как у кнопок */
+    border: 1px solid rgba(0, 223, 255, 60); 
+    border-radius: 8px;
+    
+    /* Текст внутри */
+    color: #FFFFFF;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 13px;
+    font-weight: 600;
+        border-color: #00DFFF;
+    background-color: rgba(30, 45, 65, 200);
+    /* Отступы текста от краев квадратика */
+    padding: 10px 5px;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>SYSTEM OVERVIEW
+The HandTracker Control System is an advanced human-computer interaction interface designed to bridge the gap between
+physical movement and digital execution. By leveraging real-time computer vision via OpenCV and high-fidelity landmark
+detection through MediaPipe, this software interprets hand orientations as precise system commands. Whether you are
+managing media playback or adjusting audio levels, the system eliminates the need for peripheral contact, providing
+a seamless, touchless experience.</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>82</x>
+          <y>250</y>
+          <width>771</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>771</width>
+          <height>151</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>771</width>
+          <height>151</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    /* Темный фон с синим отливом */
+    background-color: rgba(20, 30, 45, 180); 
+    
+    /* Тонкая синяя рамка, как у кнопок */
+    border: 1px solid rgba(0, 223, 255, 60); 
+    border-radius: 8px;
+    
+    /* Текст внутри */
+    color: #FFFFFF;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 13px;
+    font-weight: 600;
+        border-color: #00DFFF;
+    background-color: rgba(30, 45, 65, 200);
+    /* Отступы текста от краев квадратика */
+    padding: 10px 5px;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>HOW IT WORKS
+To begin, ensure your camera is active and lighting is sufficient for hand landmark visibility. The engine processes your hand's
+geometry in real-time: forming a Fist acts as a binary toggle to play or pause your current track, while rapid Horizontal Swipes
+allow for effortless navigation between media files. For fine-grained adjustments, the system monitors the distance between
+your index finger and thumb, translating the proximity into a Dynamic Volume scale.</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>82</x>
+          <y>410</y>
+          <width>771</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>771</width>
+          <height>151</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>771</width>
+          <height>151</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    /* Темный фон с синим отливом */
+    background-color: rgba(20, 30, 45, 180); 
+    
+    /* Тонкая синяя рамка, как у кнопок */
+    border: 1px solid rgba(0, 223, 255, 60); 
+    border-radius: 8px;
+    
+    /* Текст внутри */
+    color: #FFFFFF;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 13px;
+    font-weight: 600;
+        border-color: #00DFFF;
+    background-color: rgba(30, 45, 65, 200);
+    /* Отступы текста от краев квадратика */
+    padding: 10px 5px;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>CALIBRATION &amp; BACKGROUND MODE
+For the most intuitive experience, navigate to the Settings menu to synchronize the tracker with your environment. Users can
+toggle Mirror Mode to align on-screen feedback with natural movements or adjust the Detection Confidence thresholds
+to filter out background noise in complex environments. Note that closing the window minimizes the app to the System Tray 
+to ensure persistent gesture control; use the tray icon menu to fully exit the software.</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
