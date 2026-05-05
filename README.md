@@ -44,17 +44,17 @@ volume without touching your mouse or keyboard.
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/dig1tall/Aether.git](https://github.com/dig1tall/Aether.git)
-   cd Aether
+    git clone [https://github.com/dig1tall/Aether-Hand-Tracker.git](https://github.com/dig1tall/Aether-Hand-Tracker.git)
+    cd Aether-Hand-Tracker
    ```
 2. **Create a Conda environment:**
    ```bash
-   conda create -n aether_env python=3.10
-   conda activate aether_env
+    conda create -n aether_env python=3.10
+    conda activate aether_env
    ```
 3. **Install dependencies:**
    ```bash
-   pip install -r requirements.txt
+    pip install -r requirements.txt
    ```
 
 ---
