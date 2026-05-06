@@ -40,7 +40,22 @@ volume without touching your mouse or keyboard.
 
 ---
 
-## Installation
+## Installation & Setup
+
+### For Users (Quick Start)
+
+The easiest way to use Aether on Windows:
+
+1. Go to the [Releases](https://github.com/dig1tall/Aether-Hand-Tracker/releases) page.
+2. Download the latest `Aether.zip` archive.
+3. **Important:** Extract the ZIP folder completely.
+4. Run `Aether.exe` inside the folder.
+
+---
+
+### For Developers (Source Code)
+
+If you want to run the project from source or modify it:
 
 1. **Clone the repository:**
    ```bash
